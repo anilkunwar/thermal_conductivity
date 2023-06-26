@@ -16,9 +16,9 @@ def sph2cart(r, phi, tta):
     return x, y, z
 
 # Get user input for thermal conductivity values
-k11 = st.slider("k11", 0.0, 100.0, 24.78, 0.01)
-k22 = st.slider("k22", 0.0, 100.0, 24.78, 0.01)
-k33 = st.slider("k33", 0.0, 100.0, 39.04, 0.01)
+k11 = st.slider("k11", 0.0, 100.0, 20.00, 0.01)
+k22 = st.slider("k22", 0.0, 100.0, 20.00, 0.01)
+k33 = st.slider("k33", 0.0, 100.0, 40.00, 0.01)
 
 # phi running from 0 to pi and tta from 0 to pi
 phi = np.linspace(0, 2 * np.pi, 100)
