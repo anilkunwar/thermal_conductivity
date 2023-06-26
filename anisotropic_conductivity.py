@@ -91,9 +91,10 @@ ax.tick_params(labelsize=22)
 fig.set_size_inches(10, 10)
 
 # save the figure with increased width and height
-fig.savefig('thermal_conductivity.png', dpi=300, bbox_inches='tight')
+#fig.savefig('thermal_conductivity.png', dpi=300, bbox_inches='tight')
 
 # display the figure in Streamlit
 fig_html = mpld3.fig_to_html(fig)
-components.html(fig_html,width = 1000, height=6000)
+components.html(fig_html,width = 1000, height=2000)
+#components.html(fig_html,width = 1000, height=6000)
 
