@@ -56,7 +56,8 @@ Y_scaled = Y * radius_b
 Z_scaled = Z * radius_c
 
 # set the colormap and normalization
-cmap = cm.get_cmap('RdBu')
+#cmap = cm.get_cmap('RdBu')
+cmap = cm.get_cmap('hsv')
 vmin = np.min(Kvals)
 vmax = np.max(Kvals)
 norm = plt.Normalize(vmin=vmin, vmax=vmax)
