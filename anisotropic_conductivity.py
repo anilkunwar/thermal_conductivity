@@ -55,9 +55,26 @@ X_scaled = X * radius_a
 Y_scaled = Y * radius_b
 Z_scaled = Z * radius_c
 
+
 # set the colormap and normalization
+# Choose the color map
+cmap_name = st.selectbox("Select a color map", ['flag', 'prism', 'ocean', 'gist_earth', 'terrain',
+                      'gist_stern', 'gnuplot', 'gnuplot2', 'CMRmap',
+                      'cubehelix', 'brg', 'gist_rainbow', 'rainbow', 'jet',
+                      'turbo', 'nipy_spectral', 'gist_ncar', 'Pastel1', 'Pastel2',
+                      'Paired', 'Accent', 'Dark2', 'Set1', 'Set2', 'Set3', 'tab10',
+                      'tab20', 'tab20b', 'tab20c', 'twilight', 'twilight_shifted',
+                      'hsv', 'PiYG', 'PRGn', 'BrBG', 'PuOr', 'RdGy', 'RdBu', 'RdYlBu',
+                      'RdYlGn', 'Spectral', 'coolwarm', 'bwr', 'seismic', 'binary',
+                      'gist_yarg', 'gist_gray', 'gray', 'bone', 'pink', 'spring',
+                      'summer', 'autumn', 'winter', 'cool', 'Wistia', 'hot', 'afmhot',
+                      'gist_heat', 'copper', 'Greys', 'Purples', 'Blues', 'Greens',
+                      'Oranges', 'Reds', 'YlOrBr', 'YlOrRd', 'OrRd', 'PuRd', 'RdPu',
+                      'BuPu', 'GnBu', 'PuBu', 'YlGnBu', 'PuBuGn', 'BuGn', 'YlGn',
+                      'viridis', 'plasma', 'inferno', 'magma', 'cividis'])
 #cmap = cm.get_cmap('RdBu')
-cmap = cm.get_cmap('hsv')
+#cmap = cm.get_cmap('hsv')
+cmap = cm.get_cmap(cmap_name)
 vmin = np.min(Kvals)
 vmax = np.max(Kvals)
 norm = plt.Normalize(vmin=vmin, vmax=vmax)
