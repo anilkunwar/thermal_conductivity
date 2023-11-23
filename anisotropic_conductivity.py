@@ -113,6 +113,7 @@ fig.set_size_inches(10, 10)
 
 # display the figure in Streamlit
 fig_html = mpld3.fig_to_html(fig)
-components.html(fig_html,width = 1000, height=1200)
+st.markdown(fig_html, unsafe_allow_html=True)
+#components.html(fig_html,width = 1000, height=1200)
 #components.html(fig_html,width = 1000, height=6000)
 
