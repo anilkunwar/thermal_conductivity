@@ -92,6 +92,9 @@ cbar.ax.tick_params(labelsize=25)
 
 
 
+
+
+
 # set the axis limits
 lim = np.max(np.abs([ax.get_xlim(), ax.get_ylim(), ax.get_zlim()]))
 ax.set_xlim(-lim, lim)
@@ -119,4 +122,7 @@ fig_html = mpld3.fig_to_html(fig)
 st.markdown(fig_html, unsafe_allow_html=True)
 #components.html(fig_html,width = 1000, height=1200)
 #components.html(fig_html,width = 1000, height=6000)
+
+# Display the figure in Streamlit
+st.pyplot(fig)
 
