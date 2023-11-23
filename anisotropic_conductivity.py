@@ -79,15 +79,18 @@ vmin = np.min(Kvals)
 vmax = np.max(Kvals)
 norm = plt.Normalize(vmin=vmin, vmax=vmax)
 
+
+
 # plot the surface with scaled coordinates
 surf = ax.plot_surface(X_scaled, Y_scaled, Z_scaled,
                        rstride=1, cstride=1, facecolors=cmap(norm(Kvals)), linewidth=0.1, alpha=1.0)
 
-# add the colorbar
-cbar = fig.colorbar(cm.ScalarMappable(norm=norm, cmap=cmap))
-cbar.set_label('Thermal Conductivity (W/m K)',  fontsize=32)
-# adjust the font size of colorbar tick labels
+# Add the colorbar to a specific Axes (in this case, 'ax')
+cbar = fig.colorbar(cm.ScalarMappable(norm=norm, cmap=cmap), ax=ax)
+cbar.set_label('Thermal Conductivity (W/m K)', fontsize=32)
 cbar.ax.tick_params(labelsize=25)
+
+
 
 # set the axis limits
 lim = np.max(np.abs([ax.get_xlim(), ax.get_ylim(), ax.get_zlim()]))
